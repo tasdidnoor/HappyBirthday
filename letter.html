@@ -17,12 +17,11 @@
             overflow-y: auto !important;
         }
 
-        /* Override the global .main fadeOut from script.js */
         .main {
             display: block !important;
             opacity: 1 !important;
             position: relative !important;
-            padding-top: 20px;
+            padding-top: 40px;
             padding-bottom: 50px;
         }
 
@@ -38,39 +37,44 @@
             background: rgba(255, 255, 255, 0.85) !important;
             backdrop-filter: blur(5px);
             border-radius: 15px;
-            padding: 25px;
+            padding: 35px;
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
             color: #C4515C !important;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
             border: 1px solid rgba(255,255,255,0.5);
             margin-bottom: 30px;
         }
 
         .letter-content {
             display: flex;
-            gap: 20px;
+            gap: 35px;
             flex-direction: row;
+            align-items: flex-start;
         }
 
         .letter-text {
             flex: 1;
-            font-size: 1.1rem;
-            line-height: 1.6;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            font-family: 'Roboto', sans-serif;
         }
 
-        .placeholder-img {
-            flex: 0 0 35%;
-            height: 250px;
-            background: #fff;
+        .letter-text p {
+            margin-bottom: 20px;
+        }
+
+        .letter-image {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+
+        .letter-image img {
+            width: 100%;
+            height: auto;
             border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px dashed #C4515C;
-            color: #C4515C;
-            font-weight: bold;
-            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 3px solid #fff;
         }
 
         .back-btn {
@@ -80,18 +84,26 @@
             font-weight: bold;
             border-bottom: 2px solid #C4515C;
             margin-top: 20px;
+            transition: opacity 0.2s;
+        }
+
+        .back-btn:hover {
+            opacity: 0.7;
+            text-decoration: none;
         }
 
         @media (max-width: 768px) {
             .letter-content {
                 flex-direction: column;
             }
-            .placeholder-img {
+            .letter-image {
+                flex: none;
+                max-width: 100%;
                 width: 100%;
-                height: 200px;
+                margin-top: 20px;
             }
-            .area {
-                font-size: 35px !important;
+            .letter-container {
+                padding: 25px;
             }
         }
     </style>
@@ -100,17 +112,17 @@
     <div class="main">
         <div class="letter-wrapper">
             <div class="letter-container">
-                <h1 class="area" style="margin-bottom: 20px; text-align: center;">Dear Joalan,</h1>
                 <div class="letter-content">
                     <div class="letter-text">
-                        <p>Happy Birthday! I wanted to take a moment to write you this letter because another year has passed, and you're still as legendary as ever.</p>
-                        <p>[Placeholder for your heartfelt or hilarious message here. You can talk about all the great times, the inside jokes, and how much of a fossil he's becoming.]</p>
-                        <p>Hope your day is filled with everything you love. Stay cool, stay Joalan.</p>
-                        <p>Best regards,<br>Your Friend</p>
+                        <p>Hey man,</p>
+                        <p>HAPPY BIRTHDAY! The big 19 broskie. Hope you have the best year. Don't drink too much. Thanks for being such a good friend. I'm so proud of you for doing what you do and how far you've come. Remember when you're rich and famous.</p>
+                        <p>Hope you don't die soon, that would suck! As always, fuck you.</p>
+                        <p>Moderate Regards,</p>
+                        <p>Tas</p>
                     </div>
                     
-                    <div class="placeholder-img">
-                        [IMAGE]
+                    <div class="letter-image">
+                        <img src="img/PrincessBD.jpg" alt="Birthday Picture">
                     </div>
                 </div>
                 
@@ -125,8 +137,6 @@
     <script src="js/jquery.js"></script>
     <script>
         $(document).ready(function() {
-            // Force the main content to be visible on the letter page
-            // and bypass the fadeOut logic in script.js
             $(".main").show().css("opacity", "1");
         });
     </script>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>A Letter for Joalan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html, body {
+            background-color: #FFDAB9 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            display: block !important;
+            overflow-y: auto !important;
+        }
+
+        /* Override the global .main fadeOut from script.js */
+        .main {
+            display: block !important;
+            opacity: 1 !important;
+            position: relative !important;
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+
+        .letter-wrapper {
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .letter-container {
+            background: rgba(255, 255, 255, 0.85) !important;
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            padding: 25px;
+            width: 100%;
+            max-width: 800px;
+            color: #C4515C !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.5);
+            margin-bottom: 30px;
+        }
+
+        .letter-content {
+            display: flex;
+            gap: 20px;
+            flex-direction: row;
+        }
+
+        .letter-text {
+            flex: 1;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .placeholder-img {
+            flex: 0 0 35%;
+            height: 250px;
+            background: #fff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #C4515C;
+            color: #C4515C;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #C4515C !important;
+            font-weight: bold;
+            border-bottom: 2px solid #C4515C;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .letter-content {
+                flex-direction: column;
+            }
+            .placeholder-img {
+                width: 100%;
+                height: 200px;
+            }
+            .area {
+                font-size: 35px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="letter-wrapper">
+            <div class="letter-container">
+                <h1 class="area" style="margin-bottom: 20px; text-align: center;">Dear Joalan,</h1>
+                <div class="letter-content">
+                    <div class="letter-text">
+                        <p>Happy Birthday! I wanted to take a moment to write you this letter because another year has passed, and you're still as legendary as ever.</p>
+                        <p>[Placeholder for your heartfelt or hilarious message here. You can talk about all the great times, the inside jokes, and how much of a fossil he's becoming.]</p>
+                        <p>Hope your day is filled with everything you love. Stay cool, stay Joalan.</p>
+                        <p>Best regards,<br>Your Friend</p>
+                    </div>
+                    
+                    <div class="placeholder-img">
+                        [IMAGE]
+                    </div>
+                </div>
+                
+                <div style="text-align: center;">
+                    <a href="index.html" class="back-btn">← Back to Party</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Force the main content to be visible on the letter page
+            // and bypass the fadeOut logic in script.js
+            $(".main").show().css("opacity", "1");
+        });
+    </script>
+</body>
+</html>

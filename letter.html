@@ -1,153 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>A Letter for a Friend</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>A Message For You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        html, body {
-            background-color: #FFDAB9 !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            width: 100% !important;
-            height: 100% !important;
-            display: block !important;
-            overflow-y: auto !important;
+        :root {
+            --gold: #D4AF37;
+            --white: #FFFFFF;
+            --soft-black: #333333;
         }
 
-        .main {
-            display: block !important;
-            opacity: 1 !important;
-            position: relative !important;
-            padding-top: 40px;
-            padding-bottom: 50px;
-        }
-
-        .letter-wrapper {
-            padding: 20px;
-            width: 100%;
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--white);
+            color: var(--soft-black);
+            margin: 0;
+            padding: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .letter-container {
-            background: rgba(255, 255, 255, 0.85) !important;
-            backdrop-filter: blur(5px);
-            border-radius: 15px;
-            padding: 35px;
-            width: 100%;
-            max-width: 900px;
-            color: #C4515C !important;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            border: 1px solid rgba(255,255,255,0.5);
-            margin-bottom: 30px;
-        }
-
-        .letter-content {
-            display: flex;
-            gap: 35px;
-            flex-direction: row;
-            align-items: flex-start;
-        }
-
-        .letter-text {
-            flex: 1;
-            font-size: 1.15rem;
-            line-height: 1.7;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .letter-text p {
-            margin-bottom: 20px;
-        }
-
-        .letter-image {
-            flex: 0 0 40%;
-            max-width: 40%;
-        }
-
-        .placeholder-img {
-            width: 100%;
-            height: 300px;
-            background: #fff;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            border: 2px dashed #C4515C;
-            color: #C4515C;
-            font-weight: bold;
-            padding: 20px;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            padding: 4rem 2rem;
+            background: #fff;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
             text-align: center;
         }
 
-        .back-btn {
-            display: inline-block;
-            text-decoration: none;
-            color: #C4515C !important;
-            font-weight: bold;
-            border-bottom: 2px solid #C4515C;
-            margin-top: 20px;
-            transition: opacity 0.2s;
+        .letter-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--soft-black);
         }
 
-        .back-btn:hover {
+        .letter-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .back-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
             opacity: 0.7;
-            text-decoration: none;
-        }
-
-        @media (max-width: 768px) {
-            .letter-content {
-                flex-direction: column;
-            }
-            .letter-image {
-                flex: none;
-                max-width: 100%;
-                width: 100%;
-                margin-top: 20px;
-            }
-            .letter-container {
-                padding: 25px;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="main">
-        <div class="letter-wrapper">
-            <div class="letter-container">
-                <div class="letter-content">
-                    <div class="letter-text">
-                        <p>Hey Friend,</p>
-                        <p>HAPPY BIRTHDAY! Hope you have the best year ahead. Thanks for being such a good friend. I'm so proud of all your achievements and how far you've come. Looking forward to seeing all the great things you'll accomplish!</p>
-                        <p>Have an amazing day filled with joy and happiness!</p>
-                        <p>Best Regards,</p>
-                        <p>Your Friend</p>
-                    </div>
-                    
-                    <div class="letter-image">
-                        <div class="placeholder-img">
-                            [IMAGE PLACEHOLDER]
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="text-align: center;">
-                    <a href="index.html" class="back-btn">← Back to Party</a>
-                </div>
-            </div>
+    <div class="container">
+        <h1>A Message For You</h1>
+        <div class="letter-content">
+            <p>Hey there,</p>
+            <p>I wanted to take a moment to wish you the most incredible birthday. You’ve always been someone who brings a unique energy into every room, and today is all about celebrating that.</p>
+            <p>May this year bring you closer to your biggest dreams and fill your days with the kind of joy that lasts. You deserve all the success and happiness in the world.</p>
+            <p>Cheers to another year of greatness!</p>
+            <p>Best Regards,</p>
+            <p>Your Friend</p>
+        </div>
+        <div class="footer">
+            <a href="index.html" class="back-link">← Back to Celebration</a>
         </div>
     </div>
-
-    <!-- Scripts -->
-    <script src="js/jquery.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(".main").show().css("opacity", "1");
-        });
-    </script>
 </body>
 </html>

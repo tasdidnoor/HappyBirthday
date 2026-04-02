@@ -1,84 +1,70 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Happy Birthday, Friend!</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="Happy Birthday, Friend!">
-    <meta name="description" content="An interactive birthday celebration just for you!">
-
-    <!-- Open Graph / Facebook / Instagram -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tasdidnoor.com/HappyBirthday/">
-    <meta property="og:title" content="Happy Birthday, Friend!">
-    <meta property="og:description" content="Click to start the celebration!">
-    <meta property="og:image" content="https://tasdidnoor.com/HappyBirthday/img/cake.gif">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tasdidnoor.com/HappyBirthday/">
-    <meta property="twitter:title" content="Happy Birthday, Friend!">
-    <meta property="twitter:description" content="Click to start the celebration!">
-    <meta property="twitter:image" content="https://tasdidnoor.com/HappyBirthday/img/cake.gif">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Happy Birthday!</title>
+    
+    <!-- Fonts: Playfair Display for Elegance, Inter for Modernity -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="loader">
-                <button id="play">Start</button>
-            </div>
+    <!-- Fullscreen Start Loader -->
+    <div id="loader" class="loader">
+        <canvas id="gold-dust"></canvas>
+        <div class="loader-content">
+            <button id="play" class="start-btn">Open Celebration</button>
         </div>
     </div>
-    <audio class="song" controls loop>
-        <source src="music.mp3">
-        </source>
-        Your browser isn't invited for super fun audio time.
-    </audio>
-    <canvas id="confetti"></canvas>
-    <div class="main">
-        <div class="container pt-5">
-            <div class="row">
 
-                <div class="col-12 col-xl-6 mx-auto">
-                    <img src="img/banner.png" alt="">
-                </div>
+    <!-- Main Content -->
+    <main id="main" class="main-content" style="display: none;">
+        <canvas id="confetti"></canvas>
+        
+        <div class="container">
+            <div class="content-wrapper">
+                <header>
+                    <h1 id="name" class="recipient-name">Friend</h1>
+                </header>
 
-                <div class="col-12  text-center">
-                    <div id="name" class="area">Friend</div>
-                </div>
-
-                <div class="col-12 text-center">
-                    <div class="type-wrap">
-                        <div id="typed-strings" class="typing">
-                            <h2>Happy Birthday <i id="nae">Friend</i></h2>
-                            <h2>Have a wonderful day</h2>
-                            <h2>Filled with joy and happiness.</h2>
-                        </div>
-                        <span id="typed" style="white-space:pre;"></span>
+                <div class="typing-container">
+                    <div id="typed-strings">
+                        <p>Happy Birthday!</p>
+                        <p>Have a wonderful day...</p>
+                        <p>Filled with joy and happiness.</p>
                     </div>
+                    <span id="typed"></span>
                 </div>
 
-                <div class="col-12 cake">
-                    <img src="img/cake.gif" alt="" style="width: 150px;">
+                <div class="visuals">
+                    <!-- Minimalist SVG Cake -->
+                    <svg class="cake-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="50" width="60" height="30" rx="5" fill="#D4AF37" opacity="0.8"/>
+                        <rect x="30" y="30" width="40" height="20" rx="5" fill="#D4AF37"/>
+                        <rect x="48" y="15" width="4" height="15" fill="#333"/>
+                        <circle cx="50" cy="10" r="3" fill="#FFD700">
+                            <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
                 </div>
 
-                <div class="col-12 text-center">
-                    <a href="letter.html" class="letter-btn">Read your birthday letter</a>
-                </div>
+                <footer>
+                    <a href="letter.html" class="letter-btn">Read My Message</a>
+                </footer>
             </div>
         </div>
-        <img src="img/Balloon-Border.png" width="100%" class="balloon-border">
-    </div>
-</body>
-<script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/typed.min.js"></script>
-<script src="js/script.js"></script>
+    </main>
 
+    <!-- Hidden Audio -->
+    <audio id="song" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
 </html>

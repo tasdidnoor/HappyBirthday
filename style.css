@@ -18,7 +18,6 @@ body {
     overflow: hidden;
 }
 
-/* Loader Screen */
 .loader {
     position: fixed;
     top: 0;
@@ -69,7 +68,6 @@ body {
     box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
 }
 
-/* Main Content */
 .main-content {
     position: relative;
     width: 100vw;
@@ -148,7 +146,6 @@ body {
     color: var(--white);
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .recipient-name {
         font-size: 2.5rem;

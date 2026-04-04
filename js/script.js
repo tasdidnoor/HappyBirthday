@@ -1,12 +1,10 @@
 $(document).ready(function() {
-    // 1. Dynamic Name from URL
     const urlParams = new URLSearchParams(window.location.search);
     const name = urlParams.get('name');
     if (name) {
         $('#name').text(name);
     }
 
-    // 2. Gold Dust Particles
     const dustCanvas = document.getElementById('gold-dust');
     const dustCtx = dustCanvas.getContext('2d');
     let particles = [];
@@ -57,7 +55,6 @@ $(document).ready(function() {
     }
     animateDust();
 
-    // 3. Start Button Logic
     $('#play').click(function() {
         $('#loader').fadeOut(1000, function() {
             $('#main').fadeIn(1000);
@@ -65,7 +62,6 @@ $(document).ready(function() {
             const audio = document.getElementById('song');
             audio.play();
             
-            // Start Typed.js after fade in
             new Typed('#typed', {
                 stringsElement: '#typed-strings',
                 typeSpeed: 40,
@@ -75,7 +71,6 @@ $(document).ready(function() {
         });
     });
 
-    // 4. Gold Confetti Logic (Minimalist version)
     function startConfetti() {
         const canvas = document.getElementById('confetti');
         const ctx = canvas.getContext('2d');

@@ -31,4 +31,4 @@ A modern, high-end, and interactive birthday page designed with an "Apple-inspir
 To create a digital celebration that feels sophisticated, personal, and premium—moving away from traditional cluttered designs toward a refined, cinematic experience.
 
 ---
-*Created by Tasdid Noor*
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
